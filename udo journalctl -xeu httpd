@@ -1,0 +1,20 @@
+[0;1;31m×[0m httpd.service - The Apache HTTP Server
+     Loaded: loaded (]8;;file://fedora/usr/lib/systemd/system/httpd.service/usr/lib/systemd/system/httpd.service]8;;; [0;1;32menabled[0m; preset: [0;1;38:5:185mdisabled[0m)
+    Drop-In: /usr/lib/systemd/system/service.d
+             └─]8;;file://fedora/usr/lib/systemd/system/service.d/10-timeout-abort.conf10-timeout-abort.conf]8;;, ]8;;file://fedora/usr/lib/systemd/system/service.d/50-keep-warm.conf50-keep-warm.conf]8;;
+             /etc/systemd/system/httpd.service.d
+             └─]8;;file://fedora/etc/systemd/system/httpd.service.d/php-fpm.confphp-fpm.conf]8;;
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Thu 2025-03-13 19:40:10 EAT; 1min 34s ago
+ Invocation: 4749b9d333fa4c92aa0e98485dffab3d
+       Docs: ]8;;man:httpd.service(8)man:httpd.service(8)]8;;
+    Process: 22904 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND [0;1;31m(code=exited, status=1/FAILURE)[0m
+   Main PID: 22904 (code=exited, status=1/FAILURE)
+   Mem peak: 4.3M
+        CPU: 122ms
+
+Mar 13 19:40:10 fedora systemd[1]: Starting httpd.service - The Apache HTTP Server...
+Mar 13 19:40:10 fedora (httpd)[22904]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mhttpd.service: Referenced but unset environment variable evaluates to an empty string: OPTIONS[0m
+Mar 13 19:40:10 fedora httpd[22904]: httpd: Could not open configuration file /etc/httpd/conf/httpd.conf: No such file or directory
+Mar 13 19:40:10 fedora systemd[1]: [0;1;39m[0;1;31m[0;1;39mhttpd.service: Main process exited, code=exited, status=1/FAILURE[0m
+Mar 13 19:40:10 fedora systemd[1]: [0;1;38:5:185m[0;1;39m[0;1;38:5:185mhttpd.service: Failed with result 'exit-code'.[0m
+Mar 13 19:40:10 fedora systemd[1]: [0;1;31m[0;1;39m[0;1;31mFailed to start httpd.service - The Apache HTTP Server.[0m
