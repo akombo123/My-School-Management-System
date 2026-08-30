@@ -72,7 +72,7 @@ class StudentController extends Controller
         }
         else
         {
-            return redirect('admin/student/list')->with('error','Student not found');
+            return redirect('admin/student/list')->with('error','Student does not exist');
         }
 
     }
